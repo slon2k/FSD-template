@@ -9,6 +9,17 @@
   }
 }
 
+@mixin font-face($name, $path, $style, $weight) {
+  @font-face {
+    font-family: $name;
+    font-weight: $weight;
+    font-style: $style;
+    src: url(quote($path + ".woff2")) format("woff2"),
+      url(quote($path + ".woff")) format("woff"),
+      url(quote($path + ".ttf")) format("truetype");
+  }
+}
+
 @mixin hamburger($dim) {
   cursor: pointer;
   display: block;

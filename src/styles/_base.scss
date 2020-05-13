@@ -1,20 +1,19 @@
 @import "var";
 
-$body-background-color: white;
+$body-background-color: $background;
 $body-min-width: 300px;
 $body-font-family: $family-primary;
 $body-color: $text;
-$body-font-size: 1em;
+$body-font-size: 14px;
 $body-weight: 400;
-$body-line-height: 1.5;
+$body-line-height: 24px;
 
 $strong-color: $text-strong;
-$strong-weight: 600;
+$strong-weight: 700;
 
-$small-font-size: 0.875em;
+$headings-weight: 700;
 
-$headings-weight: 600;
-$headings-size: 1.2em;
+$small-font-size: 10px;
 
 html {
   background-color: $body-background-color;
@@ -78,13 +77,40 @@ fieldset {
   border: none;
 }
 
-h1,
-h2,
-h3,
+.h1,
+h1 {
+  color: $headings-color;
+  font-family: $family-secondary;
+  font-weight: $headings-weight;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.h2,
+h2 {
+  color: $headings-color;
+  font-family: $family-secondary;
+  font-weight: $headings-weight;
+  font-style: normal;
+  font-size: 19px;
+  line-height: 24px;
+}
+
+.h3,
+h3 {
+  color: $headings-color;
+  font-weight: $headings-weight;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
 h4,
 h5,
 h6 {
   color: $headings-color;
-  font-size: $headings-size;
+  font-size: $body-font-size;
   font-weight: $headings-weight;
 }
