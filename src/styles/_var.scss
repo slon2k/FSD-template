@@ -1,18 +1,25 @@
 $family-primary: "Roboto";
 
 //Colors
-$primary: hsl(204, 86%,  53%);
+$dark-100: #1F2041;
+$dark-75: rgba(31, 32, 65, 0.75);
+$dark-50: rgba(31, 32, 65, 0.5);
+$dark-25: rgba(31, 32, 65, 0.25);
+$dark-5: rgba(31, 32, 65, 0.05);
+$primary: #BC9CFF;
+$secondary: #6FCF97;
 $info: hsl(204, 86%,  53%);
 $success:  green;
 $warning: yellow;
 $danger: red;
 $light: hsl(0, 0%, 96%);
-$dark: hsl(0, 0%, 21%);
+$dark: #1F2041;
 
 //Text colors
-$text: black;
-$text-light: grey;
-$text-strong: black;
+$text: $dark-75;
+$text-light: $dark-75;
+$text-strong: $dark-100;
+$headings-color: $dark-100;
 
 // Link colors
 $link: blue;
