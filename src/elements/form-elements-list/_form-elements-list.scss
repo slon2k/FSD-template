@@ -1,0 +1,8 @@
+.form-elements-list {
+  display: flex;
+  flex-direction: row;
+  &__column {
+    flex-basis: 320px;
+    margin: 0 20px;
+  }
+}

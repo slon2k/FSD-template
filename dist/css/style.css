@@ -100,7 +100,6 @@ th:not([align]) {
 
 html {
   background-color: #FFFFFF;
-  font-size: 14px;
   min-width: 300px;
 }
 
@@ -114,8 +113,10 @@ textarea {
 
 body {
   color: rgba(31, 32, 65, 0.75);
-  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
   line-height: 24px;
 }
 
@@ -162,7 +163,6 @@ fieldset {
   border: none;
 }
 
-.h1,
 h1 {
   color: #1F2041;
   font-family: "Quicksand", sans-serif;
@@ -172,7 +172,6 @@ h1 {
   line-height: 30px;
 }
 
-.h2,
 h2 {
   color: #1F2041;
   font-family: "Quicksand", sans-serif;
@@ -182,7 +181,6 @@ h2 {
   line-height: 24px;
 }
 
-.h3,
 h3 {
   color: #1F2041;
   font-weight: 700;
@@ -190,14 +188,6 @@ h3 {
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
-}
-
-h4,
-h5,
-h6 {
-  color: #1F2041;
-  font-size: 14px;
-  font-weight: 700;
 }
 
 @font-face {
@@ -276,6 +266,71 @@ h6 {
 
 .burger--active span:nth-child(3) {
   transform: translateY(-5px) rotate(-45deg);
+}
+
+.form-elements-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-elements-list__column {
+  flex-basis: 320px;
+  margin: 0 20px;
+}
+
+.text-field__label {
+  display: block;
+  color: #1F2041;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.text-field__input {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  display: block;
+  height: 44px;
+  outline: none;
+  border-radius: 4px;
+  padding: 0 15px;
+  color: rgba(31, 32, 65, 0.75);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.text-field__input:focus,
+.text-field__input:hover {
+  border-color: rgba(31, 32, 65, 0.5);
+}
+
+.text-field__input::-webkit-input-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.text-field__input::-moz-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.text-field__input:-ms-input-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.text-field__input::-ms-input-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.text-field__input::placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.text-field__input {
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {

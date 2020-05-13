@@ -1,8 +1,7 @@
 @import "var";
+@import "typography";
 
-$body-background-color: $background;
 $body-min-width: 300px;
-$body-font-family: $family-primary;
 $body-color: $text;
 $body-font-size: 14px;
 $body-weight: 400;
@@ -16,8 +15,7 @@ $headings-weight: 700;
 $small-font-size: 10px;
 
 html {
-  background-color: $body-background-color;
-  font-size: $body-font-size;
+  background-color: $background;
   min-width: $body-min-width;
 }
 
@@ -26,14 +24,11 @@ button,
 input,
 select,
 textarea {
-  font-family: $body-font-family;
+  font-family: $family-primary;
 }
 
 body {
-  color: $body-color;
-  font-size: $body-font-size;
-  font-weight: $body-weight;
-  line-height: $body-line-height;
+  @include text;
 }
 
 a {
@@ -77,40 +72,14 @@ fieldset {
   border: none;
 }
 
-.h1,
 h1 {
-  color: $headings-color;
-  font-family: $family-secondary;
-  font-weight: $headings-weight;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 30px;
+  @include heading1;
 }
 
-.h2,
 h2 {
-  color: $headings-color;
-  font-family: $family-secondary;
-  font-weight: $headings-weight;
-  font-style: normal;
-  font-size: 19px;
-  line-height: 24px;
+  @include heading2;
 }
 
-.h3,
 h3 {
-  color: $headings-color;
-  font-weight: $headings-weight;
-  font-style: normal;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-}
-
-h4,
-h5,
-h6 {
-  color: $headings-color;
-  font-size: $body-font-size;
-  font-weight: $headings-weight;
+  @include heading3;
 }
