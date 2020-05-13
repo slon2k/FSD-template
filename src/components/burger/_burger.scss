@@ -1,0 +1,9 @@
+@import "../../styles/mixins";
+
+.burger {
+  @include hamburger(40px);
+  display: none;
+  @include mobile {
+    display: block;
+  }
+}

@@ -1,0 +1,89 @@
+@import "var";
+
+$body-background-color: white;
+$body-min-width: 300px;
+$body-font-family: $family-primary;
+$body-color: $text;
+$body-font-size: 1em;
+$body-weight: 400;
+$body-line-height: 1.5;
+
+$strong-color: $text-strong;
+$strong-weight: 600;
+
+$small-font-size: 0.875em;
+
+$headings-weight: 600;
+$headings-size: 1.2em;
+
+html {
+  background-color: $body-background-color;
+  font-size: $body-font-size;
+  min-width: $body-min-width;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: $body-font-family;
+}
+
+body {
+  color: $body-color;
+  font-size: $body-font-size;
+  font-weight: $body-weight;
+  line-height: $body-line-height;
+}
+
+a {
+  color: $link;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    color: $link-hover;
+    text-decoration: underline;
+  }
+  &:visited {
+    color: $link-visited;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: baseline;
+}
+
+small {
+  font-size: $small-font-size;
+}
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+strong {
+  color: $strong-color;
+  font-weight: $strong-weight;
+}
+
+fieldset {
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: $headings-size;
+  font-weight: $headings-weight;
+}

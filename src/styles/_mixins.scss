@@ -1,0 +1,128 @@
+@import "var";
+
+@mixin clearfix {
+  &::before,
+  &::after {
+    clear: both;
+    content: " ";
+    display: table;
+  }
+}
+
+@mixin hamburger($dim) {
+  cursor: pointer;
+  display: block;
+  height: $dim;
+  position: relative;
+  width: $dim;
+  span {
+    background-color: currentColor;
+    display: block;
+    height: 1px;
+    left: calc(50% - 8px);
+    position: absolute;
+    transform-origin: center;
+    transition-duration: $speed;
+    transition-property: background-color, opacity, transform;
+    transition-timing-function: $easing;
+    width: 16px;
+    &:nth-child(1) {
+      top: calc(50% - 6px);
+    }
+    &:nth-child(2) {
+      top: calc(50% - 1px);
+    }
+    &:nth-child(3) {
+      top: calc(50% + 4px);
+    }
+  }
+  &:hover {
+    background-color: rgba(black, 0.05);
+  }
+  &--active {
+    span {
+      &:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+//Responsive
+@mixin from($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+
+@mixin until($device) {
+  @media screen and (max-width: $device - 1px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: $tablet - 1px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media screen and (min-width: $desktop) and (max-width: $widescreen - 1px) {
+    @content;
+  }
+}
+
+@mixin until-widescreen {
+  @media screen and (max-width: $widescreen - 1px) {
+    @content;
+  }
+}
+
+@mixin widescreen {
+  @media screen and (min-width: $widescreen) {
+    @content;
+  }
+}
+
+@mixin widescreen-only {
+  @media screen and (min-width: $widescreen) and (max-width: $fullhd - 1px) {
+    @content;
+  }
+}
+
+@mixin until-fullhd {
+  @media screen and (max-width: $fullhd - 1px) {
+    @content;
+  }
+}
+
+@mixin fullhd {
+  @media screen and (min-width: $fullhd) {
+    @content;
+  }
+}
