@@ -296,6 +296,7 @@ h3 {
   outline: none;
   border-radius: 4px;
   padding: 0 15px;
+  margin-bottom: 10px;
   color: rgba(31, 32, 65, 0.75);
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -331,6 +332,111 @@ h3 {
 
 .text-field__input {
   width: 100%;
+}
+
+.dropdown-field {
+  position: relative;
+}
+
+.dropdown-field__label {
+  display: block;
+  color: #1F2041;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.dropdown-field__input {
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  display: block;
+  height: 44px;
+  outline: none;
+  border-radius: 4px;
+  padding: 0 15px;
+  margin-bottom: 10px;
+  color: rgba(31, 32, 65, 0.75);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.dropdown-field__input:focus,
+.dropdown-field__input:hover {
+  border-color: rgba(31, 32, 65, 0.5);
+}
+
+.dropdown-field__input::-webkit-input-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.dropdown-field__input::-moz-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.dropdown-field__input:-ms-input-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.dropdown-field__input::-ms-input-placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.dropdown-field__input::placeholder {
+  color: rgba(31, 32, 65, 0.25);
+}
+
+.dropdown-field__input {
+  width: 100%;
+  padding-right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-field__icon {
+  display: block;
+  width: 44px;
+  height: 44px;
+  background-image: url("../img/icons/keyboard_arrow_down.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 100ms ease;
+}
+
+.dropdown-field__content {
+  visibility: hidden;
+  padding: 15px;
+  width: 100%;
+  transition: all 100ms ease-in-out;
+  background-color: #FFFFFF;
+  position: absolute;
+  overflow: auto;
+  bottom: 0;
+  left: 0;
+  transform: translateY(calc(100% - 10px));
+  opacity: 0;
+}
+
+.dropdown-field.active .dropdown-field__icon {
+  transform: rotate(180deg);
+}
+
+.dropdown-field.active .dropdown-field__input {
+  border-radius: 4px 4px 0 0;
+}
+
+.dropdown-field.active .dropdown-field__content {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(100%);
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
 }
 
 @media screen and (max-width: 768px) {

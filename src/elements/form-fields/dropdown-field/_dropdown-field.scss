@@ -1,0 +1,51 @@
+@import "../form-fields";
+@import "../../../styles/mixins";
+
+.dropdown-field {
+  @include form-field;
+  position: relative;
+
+  &__input {
+    width: 100%;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    @include icon("../img/icons/keyboard_arrow_down.svg", 44px);
+    transition: transform 100ms ease;
+  }
+
+  &__content {
+    visibility: hidden;
+    padding: 15px;
+    width: 100%;
+    transition: all 100ms ease-in-out;
+    background-color: $background;
+    position: absolute;
+    overflow: auto;
+    bottom: 0;
+    left: 0;
+    transform: translateY(calc(100% - 10px));
+    opacity: 0;
+  }
+
+  &.active {
+    .dropdown-field__icon {
+      transform: rotate(180deg);
+    }
+    .dropdown-field__input{
+      border-radius: $radius $radius 0 0;
+    }
+    .dropdown-field__content {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(100%);
+      border: 1px solid $dark-50;
+      border-top: none;
+      border-radius: 0 0 $radius $radius;
+    }
+  }
+}

@@ -1,8 +1,10 @@
 <div class="form-elements-list">
   <div class="form-elements-list__column">
-    @@include("../form-fields/text-field/_text-field.html")
+    @@include("../form-fields/text-field/_text-field.html", {"placeholder": "Email", "type": "email", "label": "Email"})
+    @@include("../form-fields/dropdown-field/_dropdown-field.html", {"label": "Guests"})
   </div>  
   <div class="form-elements-list__column">
-    @@include("../form-fields/text-field/_text-field.html")
+    @@include("../form-fields/text-field/_text-field.html", {"placeholder": "Password", "type": "password", "label": "Password"})
+    @@include("../form-fields/dropdown-field/_dropdown-field.html", {"label": "Guests"} )
   </div>
 </div>
