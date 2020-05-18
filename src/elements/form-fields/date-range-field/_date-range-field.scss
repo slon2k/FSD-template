@@ -1,0 +1,70 @@
+.date-range-field {
+  width: 320px;
+  border-radius: $radius;
+  border: 1px solid $dark-25;
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  &__title {
+    @include heading2;
+  }
+
+  &__control {
+    cursor: pointer;
+  }
+
+  &__control--prev {
+    @include icon("../img/icons/arrow_back.svg", 24px);
+  }
+
+  &__control--next {
+    @include icon("../img/icons/arrow_forward.svg", 24px);
+  }
+
+  &__weekdays {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &-item {
+      color: $primary;
+      width: 40px;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      text-align: center;
+    }
+  }
+
+  &__footer {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__button {
+    @include heading3;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &--primary {
+      color: $primary;
+      &:hover {
+        color: darken($primary, 10);
+      }
+    }
+    &--secondary {
+      color: $dark-50;
+      &:hover {
+        color: darken($dark-50, 25);
+      }
+    }
+  }
+}
