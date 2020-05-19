@@ -1,0 +1,42 @@
+.checkbox {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    .checkbox__text {
+      color: $dark-75;
+      &::before {
+        border-color: $dark-50;
+      }
+    }
+  }
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    &:checked ~ .checkbox__text::before {
+      border: solid 1px $primary;
+      background-image: url("../img/icons/check_primary.svg");
+      background-size: 15px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  &__text {
+    color: $dark-50;
+    margin-left: 30px;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: $radius;
+      border: solid 1px $dark-25;
+    }
+  }
+}
