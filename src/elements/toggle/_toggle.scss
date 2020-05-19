@@ -1,0 +1,56 @@
+.toggle {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    .toggle__text {
+      color: $dark-75;
+      &::before {
+        border-color: $dark-50;
+      }
+    }
+  }
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    &:checked ~ .toggle__text::before {
+      border: solid 1px $primary;
+      border-radius: 10px;
+    }
+    &:checked ~ .toggle__text::after {
+      background-color: $primary;
+      transform: translate(18px, -6px);
+    }
+    
+  }
+  &__text {
+    color: $dark-50;
+    margin-left: 50px;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 40px;
+      height: 20px;
+      border-radius: 10px;
+      border: solid 1px $dark-25;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      border-radius: 50%;
+      transform: translateY(-6px) ;
+      width: 12px;
+      height: 12px;
+      background-color: $dark-25;
+      transition: 150ms;
+    }
+  }
+}
