@@ -25,21 +25,59 @@
     @include icon("../img/icons/arrow_forward.svg", 24px);
   }
 
-  &__weekdays {
+  &__row {
     display: flex;
     flex-direction: row;
     justify-content: center;
+  }
 
-    &-item {
-      color: $primary;
-      width: 40px;
-      font-family: Montserrat;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 12px;
-      line-height: 15px;
-      text-align: center;
+  &__day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $dark-50;
+    width: 40px;
+    height: 40px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    &--notcurrent {
+      color: $dark-25;
     }
+    &--highlighted {
+      background-color: $primary-light;
+    }
+    &--highlighted-first {
+      background-color: $primary-light;
+      border-radius: 50% 0 0 50%;
+    }
+    &--highlighted-last {
+      background-color: $primary-light;
+      border-radius: 0 50% 50% 0;
+    }
+    &--selected {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: $primary;
+      color: #ffffff;
+      font-weight: 700;
+    }
+  }
+
+  &__weekdays-item {
+    @extend .date-range-field__day;
+    color: $primary;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
   }
 
   &__footer {

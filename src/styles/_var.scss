@@ -2,20 +2,21 @@ $family-primary: "Montserrat", sans-serif;
 $family-secondary: "Quicksand", sans-serif;
 
 //Colors
-$dark-100: #1F2041;
+$dark-100: #1f2041;
 $dark-75: rgba(31, 32, 65, 0.75);
 $dark-50: rgba(31, 32, 65, 0.5);
 $dark-25: rgba(31, 32, 65, 0.25);
 $dark-5: rgba(31, 32, 65, 0.05);
-$primary: #BC9CFF;
-$secondary: #6FCF97;
-$info: hsl(204, 86%,  53%);
-$success:  green;
+$primary: #bc9cff;
+$primary-light: rgba(188, 156, 255, 0.25);
+$secondary: #6fcf97;
+$info: hsl(204, 86%, 53%);
+$success: green;
 $warning: yellow;
 $danger: red;
 $light: hsl(0, 0%, 96%);
-$dark: #1F2041;
-$background: #FFFFFF;
+$dark: #1f2041;
+$background: #ffffff;
 
 //Text colors
 $text: $dark-75;
